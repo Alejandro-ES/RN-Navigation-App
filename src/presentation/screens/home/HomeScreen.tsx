@@ -8,6 +8,7 @@ import {
 import {PrimaryButton} from '../../components/shared/PrimaryButton';
 import {type RootStackParams} from '../../routes/StackNavigator';
 import {useEffect} from 'react';
+import {IonIcon} from '../../components/shared/IonIcon';
 
 export const HomeScreen = () => {
   const navigtation = useNavigation<NavigationProp<RootStackParams>>();
@@ -17,7 +18,7 @@ export const HomeScreen = () => {
       headerLeft: () => (
         <Pressable
           onPress={() => navigtation.dispatch(DrawerActions.toggleDrawer)}>
-          <Text>Menu</Text>
+          <IonIcon name="reorder-three-outline" size={50} />
         </Pressable>
       ),
     });
